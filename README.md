@@ -1,33 +1,38 @@
-# claude-prompt-vault
+<p align="center">
+  <img src="assets/icon.svg" width="140" height="140" alt="claude-prompt-vault icon">
+</p>
 
-Marketplace pessoal de plugins do [Claude Code](https://code.claude.com) do Ailton Loures.
+<h1 align="center">claude-prompt-vault</h1>
 
-## Plugins disponíveis
+Ailton Loures' personal [Claude Code](https://code.claude.com) plugin marketplace.
 
-- **[prompt-vault](./plugins/prompt-vault)** — salve prompts repetitivos que não fazem sentido virar uma skill (pedidos pontuais, checklists, templates) e reutilize via slash command.
+## Available plugins
 
-## Como instalar
+- **[prompt-vault](./plugins/prompt-vault)** — save repetitive prompts that don't make sense as a skill (one-off requests, checklists, templates) and reuse them via slash command.
 
-Dentro de uma sessão do Claude Code:
+## Install
+
+Inside a Claude Code session:
 
 ```
 /plugin marketplace add ailtonloures/claude-prompt-vault
 /plugin install prompt-vault@ailton-plugins
 ```
 
-Depois disso os comandos `/prompt-save`, `/prompt-use`, `/prompt-list` e `/prompt-delete` ficam disponíveis em qualquer projeto.
+After that, `/prompt-save`, `/prompt-use`, `/prompt-list`, and `/prompt-delete` are available in any project.
 
-## Estrutura do repo
+## Repo structure
 
 ```
 claude-prompt-vault/
 ├── .claude-plugin/
-│   └── marketplace.json       # manifesto do marketplace
+│   └── marketplace.json       # marketplace manifest
+├── assets/
+│   └── icon.svg                # marketplace/plugin icon
 ├── plugins/
 │   └── prompt-vault/
 │       ├── .claude-plugin/
-│       │   └── plugin.json    # manifesto do plugin
+│       │   └── plugin.json    # plugin manifest
 │       ├── commands/          # slash commands
 │       └── README.md
 └── README.md
-```

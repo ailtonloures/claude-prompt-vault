@@ -1,9 +1,13 @@
 {
   "name": "prompt-vault",
-  "description": "Salve e reutilize prompts repetitivos como slash commands rápidos no Claude Code.",
+  "description": "Save and reuse repetitive prompts as quick slash commands in Claude Code.",
   "version": "1.0.0",
   "author": {
     "name": "Ailton Loures"
   },
-  "keywords": ["prompts", "productivity", "commands"]
+  "icon": "./assets/icon.svg",
+  "homepage": "https://github.com/ailtonloures/claude-prompt-vault",
+  "repository": "https://github.com/ailtonloures/claude-prompt-vault",
+  "license": "MIT",
+  "keywords": ["prompts", "productivity", "commands", "snippets"]
 }

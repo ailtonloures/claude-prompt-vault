@@ -1,22 +1,22 @@
 ---
-description: Lista todos os prompts salvos na vault
+description: List all prompts saved in the vault
 allowed-tools: Bash(ls:*), Read
 ---
 
-Passos:
-1. Liste os arquivos `.md` em `~/.claude/prompt-vault/prompts/`.
-2. Se o diretório não existir ou estiver vazio, informe: "Nenhum prompt salvo ainda. Use `/prompt-save <nome> <texto>` para criar o primeiro." e pare.
-3. Para cada prompt encontrado, leia o arquivo e extraia:
-   - `name` e `created` do frontmatter
-   - uma prévia com os primeiros ~80 caracteres do conteúdo (após o frontmatter)
-4. Apresente como uma lista organizada, um item por prompt, por exemplo:
+Steps:
+1. List the `.md` files in `~/.claude/prompt-vault/prompts/`.
+2. If the directory doesn't exist or is empty, say: "No prompts saved yet. Use `/prompt-save <name> <text>` to create the first one." and stop.
+3. For each prompt found, read the file and extract:
+   - `name` and `created` from the frontmatter
+   - a preview of the first ~80 characters of the content (after the frontmatter)
+4. Present it as an organized list, one item per prompt, for example:
 
 ```
-📋 Prompts salvos:
+📋 Saved prompts:
 
-• deploy-checklist (criado em 2026-08-20)
-  "Antes de fazer deploy, verifique: 1) testes passando 2) migra..."
+• deploy-checklist (created 2026-08-20)
+  "Before deploying, check: 1) tests passing 2) migrat..."
 
-• code-review-strict (criado em 2026-08-15)
-  "Faça uma revisão rigorosa focando em segurança e performance..."
+• code-review-strict (created 2026-08-15)
+  "Do a strict review focused on security and performa..."
 ```

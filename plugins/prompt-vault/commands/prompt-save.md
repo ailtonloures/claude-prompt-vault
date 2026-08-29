@@ -1,26 +1,26 @@
 ---
-description: Salva um prompt reutilizável na sua vault pessoal
-argument-hint: <nome> <texto do prompt>
+description: Save a reusable prompt in your personal vault
+argument-hint: <name> <prompt text>
 allowed-tools: Bash(mkdir:*), Bash(ls:*), Write, Read
 ---
 
-Contexto do usuário: $ARGUMENTS
+User input: $ARGUMENTS
 
-Você deve salvar um prompt reutilizável na "vault" pessoal do usuário.
+You must save a reusable prompt in the user's personal "vault".
 
-Passos:
-1. O primeiro token em `$ARGUMENTS` é o NOME do prompt. Normalize para kebab-case (minúsculas, espaços viram hífen, sem acentos/caracteres especiais). O restante do texto após o nome é o CONTEÚDO do prompt a ser salvo — preserve exatamente como o usuário escreveu.
-2. Garanta que o diretório `~/.claude/prompt-vault/prompts/` existe (`mkdir -p ~/.claude/prompt-vault/prompts`).
-3. Se já existir um arquivo `~/.claude/prompt-vault/prompts/<nome>.md`, mostre o conteúdo atual e pergunte ao usuário se deseja sobrescrever antes de continuar. Só prossiga com confirmação explícita.
-4. Escreva o arquivo `~/.claude/prompt-vault/prompts/<nome>.md` com este formato exato:
+Steps:
+1. The first token in `$ARGUMENTS` is the NAME of the prompt. Normalize it to kebab-case (lowercase, spaces become hyphens, no accents/special characters). Everything after the name is the prompt CONTENT to save — keep it exactly as the user wrote it.
+2. Make sure the directory `~/.claude/prompt-vault/prompts/` exists (`mkdir -p ~/.claude/prompt-vault/prompts`).
+3. If `~/.claude/prompt-vault/prompts/<name>.md` already exists, show its current content and ask the user whether to overwrite it before continuing. Only proceed with explicit confirmation.
+4. Write the file `~/.claude/prompt-vault/prompts/<name>.md` with this exact format:
 
 ```
 ---
-name: <nome>
-created: <data e hora ISO 8601 atual>
+name: <name>
+created: <current ISO 8601 date/time>
 ---
 
-<conteúdo do prompt>
+<prompt content>
 ```
 
-5. Confirme ao usuário: "✅ Prompt '<nome>' salvo em ~/.claude/prompt-vault/prompts/<nome>.md. Use `/prompt-use <nome>` para reutilizá-lo."
+5. Confirm to the user: "✅ Prompt '<name>' saved to ~/.claude/prompt-vault/prompts/<name>.md. Use `/prompt-use <name>` to reuse it."

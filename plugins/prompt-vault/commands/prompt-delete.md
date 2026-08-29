@@ -1,15 +1,15 @@
 ---
-description: Remove um prompt salvo da vault
-argument-hint: <nome>
+description: Remove a saved prompt from the vault
+argument-hint: <name>
 allowed-tools: Bash(rm:*), Bash(ls:*), Read
 ---
 
-Contexto do usuário: $ARGUMENTS
+User input: $ARGUMENTS
 
-Passos:
-1. O argumento é o NOME (slug) do prompt a remover.
-2. Verifique se `~/.claude/prompt-vault/prompts/<nome>.md` existe.
-   - Se não existir: liste os prompts disponíveis em `~/.claude/prompt-vault/prompts/` e avise o usuário. Pare aqui.
-3. Leia o arquivo e mostre ao usuário uma prévia curta do conteúdo, pedindo confirmação explícita antes de apagar.
-4. Somente após confirmação, delete o arquivo: `rm ~/.claude/prompt-vault/prompts/<nome>.md`.
-5. Confirme: "🗑️ Prompt '<nome>' removido."
+Steps:
+1. The argument is the NAME (slug) of the prompt to remove.
+2. Check whether `~/.claude/prompt-vault/prompts/<name>.md` exists.
+   - If it doesn't: list the available prompts in `~/.claude/prompt-vault/prompts/` and let the user know. Stop here.
+3. Read the file and show the user a short preview of its content, asking for explicit confirmation before deleting.
+4. Only after confirmation, delete the file: `rm ~/.claude/prompt-vault/prompts/<name>.md`.
+5. Confirm: "🗑️ Prompt '<name>' removed."

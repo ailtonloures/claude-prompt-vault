@@ -1,14 +1,22 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "ailton-plugins",
+  "description": "Ailton Loures' personal marketplace of Claude Code plugins.",
   "owner": {
     "name": "Ailton Loures",
-    "url": "https://github.com/ailtonloures"
+    "email": "ailton.loures99@gmail.com"
   },
   "plugins": [
     {
       "name": "prompt-vault",
       "source": "./plugins/prompt-vault",
-      "description": "Salve prompts repetitivos e reutilize via slash commands (/prompt-save, /prompt-use, /prompt-list, /prompt-delete)."
+      "description": "Save one-off, repetitive prompts that don't deserve to become a full skill, and replay them instantly via slash commands.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ailton Loures"
+      },
+      "category": "productivity",
+      "tags": ["prompts", "productivity", "commands", "snippets"]
     }
   ]
 }

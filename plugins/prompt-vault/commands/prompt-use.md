@@ -1,14 +1,14 @@
 ---
-description: Reutiliza um prompt salvo, opcionalmente com contexto extra
-argument-hint: <nome> [contexto adicional]
+description: Replay a saved prompt, optionally with extra context
+argument-hint: <name> [extra context]
 allowed-tools: Read, Bash(ls:*)
 ---
 
-Contexto do usuário: $ARGUMENTS
+User input: $ARGUMENTS
 
-Passos:
-1. O primeiro token em `$ARGUMENTS` é o NOME do prompt salvo (mesmo slug usado em `/prompt-save`). O restante do texto (se houver) é CONTEXTO ADICIONAL fornecido pelo usuário só para esta execução.
-2. Tente ler `~/.claude/prompt-vault/prompts/<nome>.md`.
-   - Se o arquivo não existir: liste os arquivos `.md` em `~/.claude/prompt-vault/prompts/` (sem a extensão) e informe ao usuário que "<nome>" não foi encontrado, sugerindo os nomes disponíveis mais próximos. Pare aqui.
-3. Extraia o conteúdo do prompt (tudo que vem depois do segundo `---` do frontmatter).
-4. Trate esse conteúdo como se fosse a instrução do usuário para este turno — execute-o diretamente. Se houver contexto adicional (passo 1), incorpore-o como informação relevante para adaptar a execução do prompt salvo a esta situação específica.
+Steps:
+1. The first token in `$ARGUMENTS` is the NAME of the saved prompt (same slug used in `/prompt-save`). Any remaining text is EXTRA CONTEXT provided by the user for this run only.
+2. Try to read `~/.claude/prompt-vault/prompts/<name>.md`.
+   - If the file doesn't exist: list the `.md` files in `~/.claude/prompt-vault/prompts/` (without the extension) and tell the user "<name>" wasn't found, suggesting the closest available names. Stop here.
+3. Extract the prompt content (everything after the frontmatter's closing `---`).
+4. Treat that content as if it were the user's instruction for this turn — execute it directly. If extra context was provided (step 1), factor it in as relevant information to adapt the saved prompt's execution to this specific situation.
