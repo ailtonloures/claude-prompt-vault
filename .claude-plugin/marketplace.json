@@ -10,8 +10,8 @@
     {
       "name": "prompt-vault",
       "source": "./plugins/prompt-vault",
-      "description": "Save one-off, repetitive prompts that don't deserve to become a full skill, and replay them instantly via slash commands.",
-      "version": "1.0.0",
+      "description": "Save one-off, repetitive prompts that don't deserve to become a full skill, and replay them instantly via slash commands. v2: tags, {{variables}}, full-text search, inline edit, and export.",
+      "version": "2.0.0",
       "author": {
         "name": "Ailton Loures"
       },

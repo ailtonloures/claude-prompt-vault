@@ -8,7 +8,7 @@ Ailton Loures' personal [Claude Code](https://code.claude.com) plugin marketplac
 
 ## Available plugins
 
-- **[prompt-vault](./plugins/prompt-vault)** — save repetitive prompts that don't make sense as a skill (one-off requests, checklists, templates) and reuse them via slash command.
+- **[prompt-vault](./plugins/prompt-vault)** (v2) — save repetitive prompts that don't make sense as a skill (one-off requests, checklists, templates) and reuse them via slash command. Now with tags, `{{variables}}`, full-text search, inline edit, and export.
 
 ## Install
 
@@ -19,7 +19,7 @@ Inside a Claude Code session:
 /plugin install prompt-vault@ailton-plugins
 ```
 
-After that, `/prompt-save`, `/prompt-use`, `/prompt-list`, and `/prompt-delete` are available in any project.
+After that, `/prompt-save`, `/prompt-use`, `/prompt-list`, `/prompt-search`, `/prompt-edit`, `/prompt-export`, and `/prompt-delete` are available in any project.
 
 ## Repo structure
 
