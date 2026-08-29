@@ -1,0 +1,9 @@
+{
+  "name": "prompt-vault",
+  "description": "Salve e reutilize prompts repetitivos como slash commands rápidos no Claude Code.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ailton Loures"
+  },
+  "keywords": ["prompts", "productivity", "commands"]
+}

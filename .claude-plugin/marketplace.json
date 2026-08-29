@@ -1,0 +1,14 @@
+{
+  "name": "ailton-plugins",
+  "owner": {
+    "name": "Ailton Loures",
+    "url": "https://github.com/ailtonloures"
+  },
+  "plugins": [
+    {
+      "name": "prompt-vault",
+      "source": "./plugins/prompt-vault",
+      "description": "Salve prompts repetitivos e reutilize via slash commands (/prompt-save, /prompt-use, /prompt-list, /prompt-delete)."
+    }
+  ]
+}
